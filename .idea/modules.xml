@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AxiomApiConfig/AxiomApiConfig.iml" filepath="$PROJECT_DIR$/AxiomApiConfig/AxiomApiConfig.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AxiomControlUi/AxiomControlUi.iml" filepath="$PROJECT_DIR$/AxiomControlUi/AxiomControlUi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AxiomExportImportUtilities/AxiomExportImportUtilities.iml" filepath="$PROJECT_DIR$/AxiomExportImportUtilities/AxiomExportImportUtilities.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AxiomObjectList/AxiomObjectList.iml" filepath="$PROJECT_DIR$/AxiomObjectList/AxiomObjectList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AxiomReleaseManagment.iml" filepath="$PROJECT_DIR$/AxiomReleaseManagment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AxiomTaskStarter/AxiomTaskStarter.iml" filepath="$PROJECT_DIR$/AxiomTaskStarter/AxiomTaskStarter.iml" />
+    </modules>
+  </component>
+</project>

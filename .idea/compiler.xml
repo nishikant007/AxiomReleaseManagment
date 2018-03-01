@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="AxiomApiConfig" />
+        <module name="AxiomControlUi" />
+        <module name="AxiomExportImportUtilities" />
+        <module name="AxiomObjectList" />
+        <module name="AxiomTaskStarter" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="AxiomApiConfig" target="1.5" />
+      <module name="AxiomControlUi" target="1.5" />
+      <module name="AxiomExportImportUtilities" target="1.5" />
+      <module name="AxiomObjectList" target="1.5" />
+      <module name="AxiomReleaseManagment" target="1.5" />
+      <module name="AxiomTaskStarter" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
