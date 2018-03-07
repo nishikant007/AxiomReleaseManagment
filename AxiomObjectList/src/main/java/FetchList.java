@@ -2,14 +2,28 @@ import org.h2.engine.Database;
 
 import java.io.*;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class FetchList {
-    public static void main(String[] args) {
+
+    Map<String, String> objectVal = new HashMap<String, String>();
+    List<Map<String, String>> objectList = new ArrayList<Map<String, String>>();
+    public FetchList() {
+        getObjectList();
+    }
+
+    public List<Map<String, String>> getObjectList() {
+
         try {
             Class.forName("org.h2.Driver");
             Connection conn = null;
             String s            = new String();
             StringBuffer sb = new StringBuffer();
+
+
             try {
                 conn = DriverManager.getConnection("jdbc:h2:~/test", "sa", "");
 
@@ -47,16 +61,19 @@ public class FetchList {
                         ResultSet rs = st.executeQuery(inst[i]);
 
                         while (rs.next()){
-                            String object_name  = rs.getString("object_name");
-                            String branch_name  = rs.getString("branch_name");
-                            String project_name  = rs.getString("project_name");
-                            String comment  = rs.getString("comment");
-                            System.out.println(object_name+ " - "+ branch_name+" - "+project_name+" - "+comment);
+                            objectVal.clear();
+                            objectVal.put("object_name", rs.getString("object_name"));
+                            objectVal.put("branch_name", rs.getString("branch_name"));
+                            objectVal.put("project_name", rs.getString("project_name"));
+                            objectVal.put("comment", rs.getString("comment"));
+                         objectList.add(objectVal);
+
                         }
 
                     }
                 }
                 conn.close();
+
             } catch (SQLException e) {
                 e.printStackTrace();
             } catch (IOException e) {
@@ -66,6 +83,7 @@ public class FetchList {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+        return objectList;
     }
 }
 
