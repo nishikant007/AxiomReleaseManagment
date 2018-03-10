@@ -9,10 +9,10 @@ import java.util.Map;
 
 public class FetchList {
 
-    Map<String, String> objectVal = new HashMap<String, String>();
+
     List<Map<String, String>> objectList = new ArrayList<Map<String, String>>();
     public FetchList() {
-        getObjectList();
+
     }
 
     public List<Map<String, String>> getObjectList() {
@@ -61,7 +61,7 @@ public class FetchList {
                         ResultSet rs = st.executeQuery(inst[i]);
 
                         while (rs.next()){
-                            objectVal.clear();
+                            Map<String, String> objectVal = new HashMap<String, String>();
                             objectVal.put("object_name", rs.getString("object_name"));
                             objectVal.put("branch_name", rs.getString("branch_name"));
                             objectVal.put("project_name", rs.getString("project_name"));
@@ -69,6 +69,7 @@ public class FetchList {
                          objectList.add(objectVal);
 
                         }
+                        rs.close();
 
                     }
                 }
